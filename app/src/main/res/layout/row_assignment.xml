@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:expandableTextView="http://schemas.android.com/tools"
+    android:layout_marginLeft="@dimen/_10sdp"
+    android:layout_marginRight="@dimen/_10sdp"
+    android:layout_marginTop="@dimen/_5sdp"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    app:cardCornerRadius="@dimen/_8sdp"
+    android:orientation="vertical">
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:weightSum="10">
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:layout_width="@dimen/_40sdp"
+            android:layout_height="@dimen/_40sdp"
+            android:src="@drawable/ic_new_test"
+            android:layout_gravity="center"
+            android:padding="@dimen/_8sdp"/>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/_8sdp"
+            android:layout_weight="7"
+            android:orientation="vertical">
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/roboto_bold"
+                android:layout_toLeftOf="@id/ply_adapter_img"
+                android:text="@string/app_name"
+                android:id="@+id/assign_name"/>
+
+            <com.ms.square.android.expandabletextview.ExpandableTextView
+                android:id="@+id/expand_text_view"
+                android:layout_width="match_parent"
+                android:layout_below="@id/assign_name"
+                android:layout_toLeftOf="@id/ply_adapter_img"
+                android:layout_height="wrap_content"
+                expandableTextView:animDuration="100"
+                expandableTextView:maxCollapsedLines="1">
+
+                <!-- simple text view  -->
+                <TextView
+                    android:id="@id/expandable_text"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/length_text"
+                    android:textColor="#666666" />
+
+                <!-- expandable ImageButton -->
+                <ImageButton
+                    android:id="@id/expand_collapse"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="right|bottom"
+                    android:background="@android:color/transparent" />
+
+            </com.ms.square.android.expandabletextview.ExpandableTextView>
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/assign_date"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/expand_text_view"
+                android:layout_marginTop="@dimen/_2sdp"
+                android:layout_toLeftOf="@id/ply_adapter_img"
+                android:drawableLeft="@drawable/ic_time_v1"
+                android:drawablePadding="@dimen/_5sdp"
+                android:fontFamily="@font/roboto_regular"
+                android:gravity="center_vertical"
+                android:text="@string/app_name"
+                android:textColor="@color/greytext" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/assign_teacher"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/assign_date"
+                android:layout_marginTop="@dimen/_2sdp"
+                android:layout_toLeftOf="@id/ply_adapter_img"
+                android:drawablePadding="@dimen/_5sdp"
+                android:fontFamily="@font/roboto_regular"
+                android:gravity="center_vertical"
+                android:text="@string/app_name"
+                android:textColor="@color/greytext" />
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/ply_adapter_img"
+                android:layout_width="@dimen/_40sdp"
+                android:layout_height="@dimen/_40sdp"
+                android:src="@drawable/ic_attachment"
+                android:layout_alignParentEnd="true"
+                android:padding="@dimen/_8sdp"/>
+
+        </RelativeLayout>
+
+    </androidx.appcompat.widget.LinearLayoutCompat>
+
+</com.google.android.material.card.MaterialCardView>

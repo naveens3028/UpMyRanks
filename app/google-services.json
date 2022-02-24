@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "892292857419",
+    "project_id": "chaudhary-coaching-7076a",
+    "storage_bucket": "chaudhary-coaching-7076a.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:892292857419:android:beb9827a47b78c7b0b97ce",
+        "android_client_info": {
+          "package_name": "com.wasimsirschaudharyco"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "892292857419-hs2jg3j4qg9quh4ppsuntq31ss8atigj.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDSGmxOa1VVDc2HOaxM3kwMoz8YHspdIdI"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "892292857419-hs2jg3j4qg9quh4ppsuntq31ss8atigj.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

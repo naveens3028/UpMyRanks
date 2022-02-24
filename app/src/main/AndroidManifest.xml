@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.wasimsirschaudharyco">
+
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.CAMERA"/>
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED"/>
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE"/>
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
+
+    <queries>
+        <package android:name="us.zoom.videomeetings" />
+    </queries>
+
+    <application
+        android:name="com.wasimsirschaudharyco.MyApplication"
+        android:hardwareAccelerated="true"
+        android:largeHeap="true"
+        android:icon="@mipmap/ic_launcher_wasim"
+        android:label="@string/app_name"
+        android:networkSecurityConfig="@xml/network_security_config"
+        android:roundIcon="@mipmap/ic_launcher_wasim"
+        android:theme="@style/Theme.UpMyRanks"
+        android:usesCleartextTraffic="true">
+
+        <activity android:name="com.wasimsirschaudharyco.qrCode.QRCodeActivity"
+            android:theme="@style/AppFullScreenTheme"/>
+        <activity
+            android:name="com.wasimsirschaudharyco.activity.VideoPlayActivity"
+            android:label="@string/title_activity_video_play"
+            android:screenOrientation="landscape"
+            android:exported="true"
+            android:theme="@style/AppFullScreenTheme" >
+
+        </activity>
+        <activity android:name="com.wasimsirschaudharyco.profile.ProfileActivity" />
+        <activity android:name="com.wasimsirschaudharyco.learn.ImageViewActivity" />
+        <activity
+            android:name="com.wasimsirschaudharyco.practiceTest.TestReviewActivity"
+            android:label="Today Test Review" />
+        <activity
+            android:name="com.wasimsirschaudharyco.practiceTest.TodayTestActivity"
+            android:label="Today Test" />
+        <activity android:name="com.wasimsirschaudharyco.practiceTest.StartPracticeActivity" />
+        <activity android:name="com.wasimsirschaudharyco.practiceTest.SelectedTopicActivity" />
+        <activity android:name="com.wasimsirschaudharyco.practiceTest.TestTopicActivity" />
+        <activity android:name="com.wasimsirschaudharyco.doubt.DoubtClarificationActivity" />
+        <activity android:name="com.wasimsirschaudharyco.doubt.AskDoubtActivity" />
+        <activity
+            android:name="com.wasimsirschaudharyco.learn.LearnVideoActivity"
+            android:configChanges="orientation|screenSize|layoutDirection"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.wasimsirschaudharyco.learn.LearnActivity"
+            android:exported="true" />
+        <activity android:name="com.wasimsirschaudharyco.activity.TakeTestActivity" />
+        <activity android:name="com.wasimsirschaudharyco.activity.ChapterActivity" />
+        <activity android:name="com.wasimsirschaudharyco.activity.TestResultActivity" />
+        <activity
+            android:name="com.wasimsirschaudharyco.onBoarding.LoginActivity"
+            android:exported="true"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateAlwaysHidden|adjustPan" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.ALTERNATIVE" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.wasimsirschaudharyco.onBoarding.SplashScreenActivity"
+            android:exported="true"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateAlwaysHidden|adjustPan">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name="com.wasimsirschaudharyco.activity.NotificationsActivity" />
+        <activity
+            android:name="com.wasimsirschaudharyco.activity.AttemptedResultsActivity" />
+        <activity
+            android:name="com.wasimsirschaudharyco.activity.RegistrationActivity" />
+        <activity
+            android:name="com.wasimsirschaudharyco.activity.login.OtpActivity" />
+        <activity
+            android:name="com.wasimsirschaudharyco.activity.login.CourseSelectionActivity" />
+    <!--    <activity
+            android:name=".activity.TestVideoActivity" />-->
+        <activity android:name="com.wasimsirschaudharyco.activity.TestGroupActivity"/>
+
+        <activity
+            android:name="com.wasimsirschaudharyco.activity.login.PlanSelectionActivity" />
+        <activity
+            android:name="com.wasimsirschaudharyco.MainActivity" />
+        <activity
+            android:name="com.wasimsirschaudharyco.activity.CompletedLiveActivity" />
+        <activity
+            android:name="com.wasimsirschaudharyco.activity.AttachmentActivity" />
+
+        <service android:name="com.wasimsirschaudharyco.helper.exoplayer.DemoDownloadService"
+            android:exported="false">
+            <intent-filter>
+                <action android:name="com.google.android.exoplayer.downloadService.action.RESTART"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+        </service>
+
+        <service android:name="com.google.android.exoplayer2.scheduler.PlatformScheduler$PlatformSchedulerService"
+            android:permission="android.permission.BIND_JOB_SERVICE"
+            android:exported="true"/>
+    </application>
+
+</manifest>
